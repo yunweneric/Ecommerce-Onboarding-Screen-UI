@@ -1,4 +1,5 @@
 import 'package:ecommerce_onboarding/constants/constants.dart';
+import 'package:ecommerce_onboarding/screens/home/home_screen.dart';
 import 'package:ecommerce_onboarding/screens/onboarding/components/slanding_clipper.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
@@ -124,7 +125,12 @@ class OnboardingScreenThree extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(right: appPadding),
                     child: FloatingActionButton(
-                      onPressed: () => print('Onboarding Done'),
+                      onPressed: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => HomeScreen()),
+                        ),
+                      },
                       backgroundColor: white,
                       child: Icon(
                         Icons.done_rounded,

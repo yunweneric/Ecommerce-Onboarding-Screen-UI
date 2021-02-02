@@ -1,4 +1,5 @@
 import 'package:ecommerce_onboarding/constants/constants.dart';
+import 'package:ecommerce_onboarding/screens/home/home_screen.dart';
 import 'package:ecommerce_onboarding/screens/onboarding/components/slanding_clipper.dart';
 import 'package:ecommerce_onboarding/screens/onboarding/screen_three.dart';
 import 'package:flutter/material.dart';
@@ -110,7 +111,12 @@ class OnboardingScreenTwo extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerRight,
                     child: FlatButton(
-                      onPressed: () => print('Skip'),
+                      onPressed: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => HomeScreen()),
+                        ),
+                      },
                       child: Text(
                         'Skip',
                         style: TextStyle(
